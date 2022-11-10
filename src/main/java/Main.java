@@ -83,7 +83,7 @@ public class Main {
 		//=========================================================================
 		//===================== Now let's troll user ==============================
 		//=========================================================================
-		List<String> arrayList = Arrays.asList("Are you mad bro", "I am gay", "Bro pliz tell me i am gay ok?", "But gay is ok remember");
+		List<String> arrayList = Arrays.asList("War? war newer changes. For a emperor!");
 		
 		//Loop infinitely
 		for (int i = 0; i < 150.000; i++)
