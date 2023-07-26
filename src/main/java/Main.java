@@ -7,6 +7,7 @@ import marytts.signalproc.effects.RobotiserEffect;
 import marytts.signalproc.effects.StadiumEffect;
 import marytts.signalproc.effects.VocalTractLinearScalerEffect;
 import marytts.signalproc.effects.VolumeEffect;
+import tts.TextToSpeech;
 
 public class Main {
 	
@@ -17,7 +18,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		//Create TextToSpeech
-		application.TextToSpeech tts = new application.TextToSpeech();
+		TextToSpeech tts = new TextToSpeech();
 		
 		//=========================================================================
 		//======================= Print available AUDIO EFFECTS ====================
@@ -52,69 +53,52 @@ public class Main {
 		//----- You will understand how to use the effects better :)
 		
 		//VocalTractLinearScalerEffect
-		VocalTractLinearScalerEffect vocalTractLSE = new VocalTractLinearScalerEffect(); //russian drunk effect
-		vocalTractLSE.setParams("amount:70");
+		//VocalTractLinearScalerEffect vocalTractLSE = new VocalTractLinearScalerEffect(); //russian drunk effect
+		//vocalTractLSE.setParams("amount:70");
 		
 		//JetPilotEffect
-		JetPilotEffect jetPilotEffect = new JetPilotEffect(); //epic fun!!!
-		jetPilotEffect.setParams("amount:100");
+		//JetPilotEffect jetPilotEffect = new JetPilotEffect(); //epic fun!!!
+		//jetPilotEffect.setParams("amount:100");
 		
 		//RobotiserEffect
-		RobotiserEffect robotiserEffect = new RobotiserEffect();
-		robotiserEffect.setParams("amount:50");
+		//RobotiserEffect robotiserEffect = new RobotiserEffect();
+		//robotiserEffect.setParams("amount:50");
 		
 		//StadiumEffect
-		StadiumEffect stadiumEffect = new StadiumEffect();
-		stadiumEffect.setParams("amount:150");
+		//StadiumEffect stadiumEffect = new StadiumEffect();
+		//stadiumEffect.setParams("amount:150");
 		
 		//LpcWhisperiserEffect
-		LpcWhisperiserEffect lpcWhisperiserEffect = new LpcWhisperiserEffect(); //creepy
-		lpcWhisperiserEffect.setParams("amount:70");
+		//LpcWhisperiserEffect lpcWhisperiserEffect = new LpcWhisperiserEffect(); //creepy
+		//lpcWhisperiserEffect.setParams("amount:70");
 		
 		//VolumeEffect
-		VolumeEffect volumeEffect = new VolumeEffect(); //be careful with this i almost got heart attack
-		volumeEffect.setParams("amount:0");
+		//VolumeEffect volumeEffect = new VolumeEffect(); //be careful with this i almost got heart attack
+		//volumeEffect.setParams("amount:0");
 		
 		//Apply the effects
 		//----You can add multiple effects by using the method `getFullEffectAsString()` and + symbol to connect with the other effect that you want
 		//----check the example below
-		tts.getMarytts().setAudioEffects(stadiumEffect.getFullEffectAsString());// + "+" + stadiumEffect.getFullEffectAsString());
+		//tts.getMarytts().setAudioEffects(stadiumEffect.getFullEffectAsString());// + "+" + stadiumEffect.getFullEffectAsString());
 		
 		//=========================================================================
 		//===================== Now let's troll user ==============================
 		//=========================================================================
 		List<String> arrayList = Arrays.asList("War? war newer changes. For a emperor!");
+
+		tts.setVoice("ac-irina-hsmm");
+
+		arrayList = Arrays.asList("Война никогда не меняется! Скажи зачем тебе нужен такой не очень крутой голос.");
 		
 		//Loop infinitely
 		for (int i = 0; i < 150.000; i++)
 			arrayList.forEach(word -> tts.speak(word, 2.0f, false, true));
 		
 	}
-	
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
+
 	//================ YOUTUBE TUTORIAL 1-2-3 CODE ============================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
-	//=========================================================================
 	public void tutorial_1_2_3_FromYoutube() {
-		application.TextToSpeech tts = new application.TextToSpeech();
+		TextToSpeech tts = new TextToSpeech();
 		
 		//=========================================================================
 		//=========================Print available voices =========================
